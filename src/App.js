@@ -1,6 +1,6 @@
 import React from 'react'
 import './App.scss'
-import ChattingPage from './Pages/Chatting-Page'
+import ChattingPage from './Pages/chatting-page'
 
 function App() {
   return (

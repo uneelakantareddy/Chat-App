@@ -27,7 +27,7 @@ const MsgBox = (props) => {
           className="msg--like-btn"
           onClick={() => setNoOfLikes((count) => count + 1)}
         >
-          ❤️
+          &#128077;
         </span>
         <span>{noOfLikes !== 0 && noOfLikes}</span>
       </div>

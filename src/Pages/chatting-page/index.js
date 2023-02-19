@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, createRef } from 'react'
 import './index.scss'
 import MsgBox from '../../Components/Msg-Box'
 import Header from '../../Components/Header'
@@ -11,22 +11,28 @@ const ChattingPage = () => {
 
   const MsgdataHanlder = (data) => {
     setMsgData((state) => {
+      scrollBottom()
       return [...state, data]
     })
     //fetching the new msgData to the msg data
   }
+  const msgBody = createRef()
+  const scrollBottom = () => {
+    msgBody.current?.scrollIntoView({ behaviour: 'smooth' })
+  }
 
   return (
     <React.Fragment>
-      <div>
-        <Header />
+      <Header />
+      <div className="msg-body">
         {msgData &&
           msgData.map((item, index) => {
             return <MsgBox {...item} key={index} />
           })}
-        <div className="custom-inputbox">
-          <CustomInputBox MsgdataHanlder={MsgdataHanlder} />
-        </div>
+        <div className="scroll--margin" ref={msgBody}></div>
+      </div>
+      <div className="custom-inputbox">
+        <CustomInputBox MsgdataHanlder={MsgdataHanlder} />
       </div>
     </React.Fragment>
   )
