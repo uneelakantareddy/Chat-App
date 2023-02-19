@@ -1,0 +1,21 @@
+.header{
+    display: flex;
+    margin: 0 2rem;
+    // padding: 0.5rem 2rem;
+    justify-content: space-between;
+    border-bottom: 2px solid gray;
+
+    background-color: #e7e7e7;
+    &__description{
+        font-size: 1rem;
+        color: rgb(98, 95, 95);
+
+    }
+    &__rightSideContent{
+        display: flex;
+        flex-direction: row;
+        column-gap: 0.7rem;
+        align-items: center;
+    }
+   
+}

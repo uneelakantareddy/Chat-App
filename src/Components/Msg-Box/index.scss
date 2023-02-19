@@ -1,0 +1,37 @@
+.msg{
+    padding: 0.5rem 2rem;
+    &__userprofile--img{
+        border-radius: 50%;
+    }
+    &__userdetails{
+        margin-left: 3.5rem;
+        margin-top: -2.7rem;
+        &-addInfo{
+            margin:0.5rem 0rem;
+            &--name{
+                margin-left: 0.3rem;
+                color: gray;
+            }
+            &--time{
+                margin-left: 0.3rem;
+                color: gray;
+    
+            }
+    
+        }
+    }
+    &__content{
+        display: flex;
+        width:fit-content;
+        background-color: azure;
+        border-radius: 0 1rem 1rem 1rem;
+        padding: 1rem;
+
+    }
+    &--like-btn{
+        cursor: pointer;
+        margin-left: 0.5rem;
+    }
+    
+
+}
