@@ -1,5 +1,5 @@
 .custom-input{
-    position: relative;
+    position: relative !important;
     width: 100%;
     max-width: 50rem;
     margin-left: 1.9rem;
@@ -34,18 +34,16 @@
     &__input--field{
         
         border: 0;
-        width: 100%;
         border-radius: 2rem;
         height: 3rem;
         background-color: transparent;
         width: calc(100% - 5rem);
-        display: flex;
         @media  screen and (max-width:1110px) {
         height: 2.5rem;
             
         }
         @media  screen and (max-width:870px) {
-            max-width: 1.5rem;
+            max-width: 18rem;
             
         }
         
